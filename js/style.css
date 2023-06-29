@@ -1,0 +1,84 @@
+body {
+  margin: 0px;
+  height: 100%;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  background-color: white;
+  padding:20px 20px;
+}
+.wrapper {
+  width: 100%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 35% 35% 30%;
+  height: 100%;
+}
+.header {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  height: 70px;
+  background-color: gray;
+}
+
+.aside {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  background-color: gray;
+}
+.title {
+  font-size: 30px;
+  font-weight: bold;
+}
+.intro {
+  font-size: 20px;
+}
+
+.article {
+  display: block;
+  overflow: auto;
+}
+.articleImg {
+  width: 20%;
+  aspect-ratio: 1/1;
+  height: 100px;
+  float: right;
+}
+.articleTitle {
+  float: left;
+  font-size: 22px;
+  width: 80%;
+  text-align: top;
+  color: gray;
+}
+.portrait {
+  width: 100%;
+  aspect-ratio: 1/1.25;
+}
+.landscap {
+  width: 100%;
+  aspect-ratio: 1/0.5;
+}
+.footer{
+  padding-top:20px;
+  
+}
+
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    margin: 0;
+    width: 100%;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 100%;
+    height: 100%;
+  }
+  .header {
+    grid-column: 1;
+    grid-row: 1;
+    height: 70px;
+  }
+  .aside {
+    display: none;
+  }
+}
